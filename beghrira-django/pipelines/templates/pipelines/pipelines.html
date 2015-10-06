@@ -1,0 +1,7 @@
+{% if pipelines_list %}
+	{% for pipeline in pipelines_list %}
+		{{ pipeline.project_name }}
+	{% endfor %}
+{% else %}
+	<p>No pipelines</p>
+{% endif %}
