@@ -1,5 +1,8 @@
-<form action="/create/" method="post">{% csrf_token %}
-      {{ form.as_p }}
-      <input type="submit" value="Request Pipeline" />
-</form>
-
+{% if form %}
+  <form method='POST' action=''>{% csrf_token %}
+	  {{ form.as_p }}
+    <input type='submit' value='Create pipeline'/>
+  </form>
+{% else %}
+  {{ thanks }}
+{% endif %}
