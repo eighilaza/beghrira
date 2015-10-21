@@ -1,3 +1,10 @@
+*~
+beghrira-db
+beghrira-media
+beghrira-static
+beghrira-django/*/migrations
+beghrira-django/secret.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
