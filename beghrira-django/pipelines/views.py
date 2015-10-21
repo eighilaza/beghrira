@@ -1,3 +1,7 @@
+import sys
+sys.path.append('/root/beghrira/beghrira-forge')
+import forge
+
 from django.shortcuts import render
 from pipelines.models import Pipeline, PipelineForm
 
@@ -14,6 +18,7 @@ def create(request):
     if form.is_valid():
         instance = form.save(commit=False)
         instance.save()
+        forge.create_pipeline()
     if request.method == 'POST':
         context = { 'thanks' : 'Thank you, your pipeline was instanciated' }
     return render(request, template, context)
